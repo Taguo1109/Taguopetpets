@@ -1,5 +1,7 @@
 package com.taguo.petpets.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +26,20 @@ public class CategoriesService {
 	}
 	//修改類別
 	//刪除類別
+	public String deleteById(Long categoryId) {
+		//先查詢是否有此類別
+		Categories categoryToDelete = categoriesRepository.findById(categoryId)
+						.orElseThrow(()->new RuntimeException("未找到紀錄"));
+		
+		//刪除
+		categoriesRepository.delete(categoryToDelete);
+		return "成功刪除"+categoryId;
+	}
 	//查詢類別
 	public Categories findById(Long categoryId) {
 		return categoriesRepository.findById(categoryId).orElse(null);
+	}
+	public List<Categories> findAllCategories(){
+		return categoriesRepository.findAll();
 	}
 }
