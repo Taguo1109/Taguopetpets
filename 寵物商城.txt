@@ -1,0 +1,60 @@
+寵物商城-<模擬好味小姐>
+
+開發環境：
+Eclipse、SpringBoot3、React or Vue3、SwaggerUI、Docker、MySQL8.0xx
+
+建立springboot專案
+參考彥宇筆記
+https://hackmd.io/@Anddie-Chen/Sk5tewrIa
+
+撰寫順序
+1.撰寫config
+	CorsConfig.java
+	JwtUtil.java
+	SecurityConfig.java
+	LoginFilter.java
+	WebSocketUtil.java(額外再使用可以先不用)
+
+
+2.撰寫entity
+3.撰寫repository
+4.撰寫service
+5.撰寫controller
+6.postman測試
+7.撰寫前端串接API
+
+會員註冊
+商品
+分類表
+評價
+訂單
+購物車
+寄送方式
+
+第一步
+
+Entity:
+
+Admin
+Customers
+Products
+Categories
+PetCategories
+Orders
+ShippingMethods
+ShoppingCartItems
+
+
+第二步
+Repository
+
+1130131
+做AdminController(註冊、查詢)
+在思考安全性問題
+
+1130201
+做CustomersController(註冊、查詢)
+思考是否要記錄消費金額(1年內)
+設立VIP及一般用戶
+
+做登入註冊Httpsession
