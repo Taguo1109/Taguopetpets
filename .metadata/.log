@@ -177,3 +177,6 @@ END
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-02-01 20:56:25.596
 !MESSAGE Started org.springframework.tooling.boot.ls LS process 19395
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-02-01 21:59:40.902
+!MESSAGE Classpath changed for project: petpets

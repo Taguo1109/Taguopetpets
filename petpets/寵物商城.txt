@@ -68,3 +68,19 @@ Categories、PetCategories
 Products
 製作商品新增修改查詢
 
+22:00
+建立vue專案
+終端開啟想要建立專案的資料夾
+sudo vue create 專案名稱
+
+開啟後使用npm run serve
+
+預設終端為8080會與後端的8080衝突
+所以在vue.config.js做修改
+添加此語句
+module.exports = {
+  devServer:{
+    port: 1109,//使用不同端口
+  }
+}
+
