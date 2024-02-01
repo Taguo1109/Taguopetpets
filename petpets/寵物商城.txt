@@ -71,12 +71,10 @@ Products
 22:00
 建立vue專案
 終端開啟想要建立專案的資料夾
-sudo vue create 專案名稱
 
 或
 sudo npm create vue@latest
 
-開啟後使用npm run serve
 都否
 
 開啟專案後
@@ -88,9 +86,26 @@ npm run dev
 預設終端為8080會與後端的8080衝突
 所以在vue.config.js做修改
 添加此語句
-module.exports = {
-  devServer:{
-    port: 1109,//使用不同端口
-  }
-}
+server:{
+    port:1109,//更改端口
+  },
 
+npm install vue-router@next
+使用router
+
+在src底下建立router.js
+
+App.vue要更改
+
+內容為
+<script setup>
+</script>
+
+<template>
+    <router-view></router-view>
+
+
+</template>
+
+<style scoped></style>
+才能夠使用其他頁面
