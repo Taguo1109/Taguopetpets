@@ -108,6 +108,6 @@ public class CustomersController {
 			httpSession.invalidate();
 			return "Y";
 		}
-		return "N";
+		return "No";
 	}
 }
