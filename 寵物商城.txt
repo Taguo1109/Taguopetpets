@@ -61,6 +61,10 @@ Repository
 
 15:45
 登入登出暫緩-目前可以用戶登入登出，但沒有用到安全性的套件只有判斷
+
+Categories、PetCategories
+先建立分類
+再建立商品
 Products
 製作商品新增修改查詢
 
