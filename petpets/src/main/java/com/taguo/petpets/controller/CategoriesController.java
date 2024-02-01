@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.taguo.petpets.entity.Categories;
-import com.taguo.petpets.service.CategoriesService;import jakarta.websocket.server.PathParam;
+import com.taguo.petpets.service.CategoriesService;
 
 @RestController
 @RequestMapping("/public/api/categories")
