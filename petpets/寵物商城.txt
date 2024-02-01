@@ -77,7 +77,13 @@ sudo vue create 專案名稱
 sudo npm create vue@latest
 
 開啟後使用npm run serve
-是否使用TypeScript(否)
+都否
+
+開啟專案後
+設定權限
+sudo chown -R 501:20 "/Users/taguo/.npm"
+npm install
+npm run dev
 
 預設終端為8080會與後端的8080衝突
 所以在vue.config.js做修改
