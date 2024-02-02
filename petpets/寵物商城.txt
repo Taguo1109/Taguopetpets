@@ -109,3 +109,18 @@ App.vue要更改
 
 <style scoped></style>
 才能夠使用其他頁面
+
+0202
+
+Vscode安裝Vue VSCode Snippets
+快速建立模板
+vsbase
+
+跟後端連結的Controller需要
+@CrossOrigin(origins = "http://localhost:你的Vue端口號")
+
+安裝axios
+npm install axios
+
+import axios from ''
+

@@ -1,9 +1,11 @@
 package com.taguo.petpets.controller;
 
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +23,7 @@ import jakarta.servlet.http.HttpSession;
 
 @RestController
 @RequestMapping("/public/api/customers")
+@CrossOrigin(origins = "http://localhost:1109",maxAge = 3600,allowCredentials = "true")
 public class CustomersController {
 
 	@Autowired
@@ -109,5 +112,24 @@ public class CustomersController {
 			return "Y";
 		}
 		return "No";
+	}
+	
+	@GetMapping("/search")
+	public ResponseEntity<List<Customers>> searchCustomers(
+			@RequestParam(name = "customerId", required = false) Long customerId) {
+
+		if (customerId != null) {
+			// 如果提供了id，搜尋用戶
+			Customers customer = customersService.findById(customerId);
+			if (customer != null) {
+				return ResponseEntity.ok(Collections.singletonList(customer));
+			} else {
+				return ResponseEntity.ok(Collections.emptyList());
+			}
+		} else {
+			List<Customers> customers = customersService.findAllCustomers();
+			return ResponseEntity.ok(customers);
+		}
+
 	}
 }
