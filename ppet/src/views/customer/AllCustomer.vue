@@ -14,17 +14,19 @@
 </template>
 
 <script setup>
-import { ref,onMounted } from "vue";
-import axios from 'axios';
+import { ref, onMounted } from "vue";
+import axios from "axios";
 
 const customers = ref([]);
 const searchId = ref("");
 const filteredCustomers = ref(customers.value);
-const apiUrl = import.meta.env.VITE_API_JAVAURL
+const apiUrl = import.meta.env.VITE_API_JAVAURL;
 
 const search = async () => {
   try {
-    const response = await axios.get(`${apiUrl}public/api/customers/search?customerId=${searchId.value}`);
+    const response = await axios.get(
+      `${apiUrl}public/api/customers/search?customerId=${searchId.value}`
+    );
     filteredCustomers.value = response.data;
     console.log(filteredCustomers.value);
   } catch (error) {
@@ -38,7 +40,6 @@ onMounted(() => {
   search(); // 初始載入時進行搜尋
 });
 </script>
-
 
 <style scoped>
 h1 {

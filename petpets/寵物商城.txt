@@ -124,3 +124,7 @@ npm install axios
 
 import axios from ''
 
+0205
+
+寫商品查詢提供給首頁使用
+
